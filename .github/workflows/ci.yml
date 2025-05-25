@@ -17,7 +17,7 @@ jobs:
         uses: docker/setup-buildx-action@v2   # Setup docker builder for multi-platform builds
 
       - name: Build Docker image
-        run: docker build -t ashdocker234/portfolio-contact-web:latest .
+        run: docker build -t ashdocker234/portfolio-contact-app:latest .
 
       # Optional: To push image to Docker Hub, you will add login and push steps later
 
