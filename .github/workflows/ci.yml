@@ -3,7 +3,7 @@ name: Build Docker Image
 on:
   push:
     branches:
-      - main   # Run workflow when code is pushed to main branch
+      - master  # Run workflow when code is pushed to main branch
 
 jobs:
   build:
