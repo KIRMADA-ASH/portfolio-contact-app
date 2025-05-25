@@ -1,0 +1,23 @@
+name: Build Docker Image
+
+on:
+  push:
+    branches:
+      - main   # Run workflow when code is pushed to main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Use Ubuntu server hosted by GitHub Actions
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3   # Get your code from GitHub repo
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2   # Setup docker builder for multi-platform builds
+
+      - name: Build Docker image
+        run: docker build -t ashdocker234/portfolio-contact-web:latest .
+
+      # Optional: To push image to Docker Hub, you will add login and push steps later
+
